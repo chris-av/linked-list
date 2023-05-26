@@ -34,7 +34,11 @@ class LinkedList {
   }
 
   push(data) {
-    if (this.head.data === null) { this.head = new Node(data); return; }
+    if (this.head === null) {
+      this.head = new Node(data);
+      this.length++;
+      return this;
+    }
     let currnode = this.head;
     while (currnode && currnode.next) { currnode = currnode.next; }
     currnode.next = new Node(data)
