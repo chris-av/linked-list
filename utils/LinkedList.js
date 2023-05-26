@@ -15,6 +15,24 @@ class LinkedList {
     return counter;
   }
 
+  print() {
+    let currNode = this.head;
+    console.log('LIST LENGTH : ', this.length);
+    console.log('CREATED AT : ', this.createdAt);
+
+    if (currNode === null) { return this; }
+
+    console.log('󱞪 ', currNode.data);
+
+    while (currNode.next) {
+      currNode = currNode.next;
+      console.log('󱞪 ', currNode.data);
+    }
+
+    return this;
+
+  }
+
   push(data) {
     if (this.head.data === null) { this.head = new Node(data); return; }
     let currnode = this.head;
