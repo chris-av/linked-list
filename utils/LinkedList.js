@@ -61,7 +61,8 @@ class LinkedList {
   insert(data, index) {
     if (index === 0 && this.head === null) {
       this.head = new Node(data);
-      return;
+      this.length++;
+      return this;
     }
 
     let currnode = this.head;
