@@ -3,6 +3,8 @@ const Node = require('./Node');
 class LinkedList {
   constructor(head = null) {
     this.head = head ? new Node(head) : null;
+    this.length = head ? 1 : 0;
+    this.createdAt = new Date().toLocaleString();
   }
 
   size() {
