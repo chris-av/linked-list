@@ -40,7 +40,7 @@ class LinkedList {
       return this;
     }
     let currnode = this.head;
-    while (currnode && currnode.next) { currnode = currnode.next; }
+    while (currnode.next) { currnode = currnode.next; }
     currnode.next = new Node(data)
     return currnode.next;
   }
