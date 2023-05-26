@@ -55,7 +55,8 @@ class LinkedList {
       currnode = currnode.next;
     }
     currnode.next = null;
-    return;
+    this.length--;
+    return this;
   }
 
   insert(data, index) {
