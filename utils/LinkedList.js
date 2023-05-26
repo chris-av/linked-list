@@ -42,7 +42,8 @@ class LinkedList {
     let currnode = this.head;
     while (currnode.next) { currnode = currnode.next; }
     currnode.next = new Node(data)
-    return currnode.next;
+    this.length++;
+    return this;
   }
 
   pop() {
