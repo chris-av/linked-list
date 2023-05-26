@@ -112,6 +112,13 @@ class LinkedList {
 
   }
 
+  prepend(data) {
+    const detatched = this.head;
+    this.head = new Node(data);
+    this.head.next = detatched;
+    return this;
+  }
+
 }
 
 module.exports = LinkedList;
