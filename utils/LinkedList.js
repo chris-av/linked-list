@@ -65,6 +65,11 @@ class LinkedList {
       return this;
     }
 
+    if (index === this.length) {
+      this.push(data);
+      return this;
+    }
+
     let currnode = this.head;
     let prevnode;
     let currindex = 0;
