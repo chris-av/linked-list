@@ -59,7 +59,7 @@ class LinkedList {
   }
 
   insert(data, index) {
-    if (index === 0 && this.head.data === null) {
+    if (index === 0 && this.head === null) {
       this.head = new Node(data);
       return;
     }
