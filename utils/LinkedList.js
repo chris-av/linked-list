@@ -75,7 +75,7 @@ class LinkedList {
       currindex++;
     }
 
-    if (!currnode) throw new Error(`reached the end of the list at index ${currindex-1}, could not reach the ${index} node ... `);
+    if (!currnode) throw new Error(`reached the end of the list at index ${currindex - 1}, could not reach the ${index} node ... `);
 
     if (currindex === 0) {
       this.head = new Node(data);
