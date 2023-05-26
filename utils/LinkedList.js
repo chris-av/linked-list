@@ -94,6 +94,24 @@ class LinkedList {
 
   }
 
+  concat(list) {
+    if (!this.head) {
+      this.head = list.head;
+      this.length = list.length;
+      return this;
+    }
+
+    let currNode = this.head;
+    while (currNode.next) {
+      currNode = currNode.next;
+    }
+
+    currNode.next = list.head;
+    this.length = this.length + list.length;
+    return this;
+
+  }
+
 }
 
 module.exports = LinkedList;
