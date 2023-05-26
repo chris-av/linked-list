@@ -9,7 +9,7 @@ class LinkedList {
 
   size() {
     if (this.head === null) { return 0; }
-    let counter = 0;
+    let counter = 1;
     let currnode = this.head;
     while (currnode.next) { counter++; currnode = currnode.next; }
     return counter;
