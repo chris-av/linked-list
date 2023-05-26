@@ -2,7 +2,7 @@ const Node = require('./Node');
 
 class LinkedList {
   constructor(head = null) {
-    this.head = new Node(head);
+    this.head = head ? new Node(head) : null;
   }
 
   size() {
